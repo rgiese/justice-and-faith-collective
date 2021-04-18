@@ -1,0 +1,16 @@
+/*
+ Theme Name:   Justice and Faith Collective
+ Theme URI:    https://github.com/rgiese/justice-and-faith-collective.git
+ Description:  A child theme of the Twenty Twenty WordPress theme for justiceandfaith.com
+ Author:       Robin Giese
+ Author URI:   https://grumpycorp.com
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url("../twentytwenty/style.css");
+
+/* Testing to make sure child theme is applied */
+h1 { background-color: aqua;}

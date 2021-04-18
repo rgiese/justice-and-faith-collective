@@ -1,23 +1,9 @@
-# ignore everything in the root except the "wp-content" directory.
+# Ignore wp-content by default (but include it as a directory)
 !wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
 wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
+
+# Ignore stock themes (but include our custom theme)
 !wp-content/themes/
+wp-content/themes/*
 
-# ignore these plugins
-wp-content/plugins/hello.php
-
-# ignore specific themes
-wp-content/themes/twenty*/
-
-# ignore node dependency directories
-node_modules/
-
-# ignore log files and databases
-*.log
-*.sql
-*.sqlite
+!wp-content/themes/justice-and-faith
