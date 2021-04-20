@@ -11,6 +11,10 @@
 */
 
 @import url("../twentytwenty/style.css");
-
-/* Testing to make sure child theme is applied */
-h1 { background-color: aqua;}
+h1 {
+    background-color: aqua;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    /* override TwentyTwenty specialization */
+    font-weight: 400;
+    letter-spacing: normal;
+}
