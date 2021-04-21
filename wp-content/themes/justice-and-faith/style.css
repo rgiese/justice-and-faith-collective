@@ -10,6 +10,8 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/* Configure fonts */
+
 @import url("../twentytwenty/style.css");
 h1, h2, .site-title, .primary-menu {
     font-family: "Bebas Neue", Helvetica, sans-serif;
@@ -28,4 +30,10 @@ h1, h2, .site-title, .primary-menu {
 
 ul.primary-menu {
     font-size: 3rem;
+}
+
+/* Hide titles on all pages */
+
+.page .entry-title, header.entry-header {
+    display: none;
 }
