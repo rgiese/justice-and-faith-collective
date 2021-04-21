@@ -32,6 +32,11 @@ ul.primary-menu {
     font-size: 3rem;
 }
 
+ul.sub-menu {
+    font-size: 2rem;
+    letter-spacing: normal;
+}
+
 /* Hide titles on all pages */
 
 .page .entry-title, header.entry-header {
