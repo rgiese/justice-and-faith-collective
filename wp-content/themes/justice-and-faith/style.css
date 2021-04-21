@@ -37,8 +37,64 @@ ul.sub-menu {
     letter-spacing: normal;
 }
 
-/* Hide titles on all pages */
+/* Layout */
 
 .page .entry-title, header.entry-header {
+    /* Hide titles on all pages */
     display: none;
+}
+
+.header-inner {
+    /* Tighten up header */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
+
+:root {
+    /* Listing colors as "naked" RGB values here so we can tone them with `rgba` below */
+    --jfc-primary-yellow: 250, 218, 80;
+    --jfc-primary-blue: 20, 163, 199;
+    --jfc-dark-gray: 102, 102, 102;
+}
+
+body {
+    /* Toned-down primary background */
+    background-color: rgba(var(--jfc-primary-yellow), 0.2);
+}
+
+.site-logo {
+    /* Site logo has transparent background -> provide appropriate background color */
+    background-color: rgb(var(--jfc-dark-gray));
+}
+
+.site-logo img {
+    /* Sizing fix for site logo */
+    max-height: 9em;
+}
+
+#site-header {
+    /* Match (extend) the background color of the logo image */
+    background-color: rgb(var(--jfc-dark-gray)) !important;
+}
+
+.header-inner {
+    /* 
+        Primary header block
+        - replace margin with padding to get color right around the header image
+     */
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
+    padding-right: 40px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary-menu>li>.icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
+    /* Link color in header blocks */
+    color: black !important;
+}
+
+#site-footer, .footer-nav-widgets-wrapper {
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
