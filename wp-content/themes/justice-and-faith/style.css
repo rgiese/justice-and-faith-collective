@@ -98,3 +98,44 @@ body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary
 #site-footer, .footer-nav-widgets-wrapper {
     background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
+
+/* Home page-specific tweaks */
+
+.jfc-home-blurb {
+    background-color: rgb(var(--jfc-dark-gray)) !important;
+    color: rgb(var(--jfc-primary-yellow)) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    /* Replace margin with padding so we get the background color we want. */
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+
+.wp-block-image {
+    /* This is (probably?) only used on the home page; suppress margin. */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.footer-nav-widgets-wrapper {
+    margin-top: 0 !important;
+}
+
+/* Non-home-page specific tweaks */
+
+.entry-content {
+    /* Add padding to content by default since we've tightened up the header and footer... */
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.home .entry-content {
+    /* ...except not on the actual home page. */
+    padding-top: 0;
+    padding-bottom: 0;
+}
