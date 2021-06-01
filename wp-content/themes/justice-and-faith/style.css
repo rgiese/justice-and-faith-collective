@@ -93,6 +93,13 @@ body {
     background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
 
+@media screen and (max-width: 30em) {
+    /* Mobile only */
+    .menu-modal-inner {
+        background-color: rgba(var(--jfc-primary-yellow), 0.5) !important;
+    }
+}
+
 body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary-menu>li>.icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
     /* Link color in header blocks */
     color: black !important;
