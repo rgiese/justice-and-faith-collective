@@ -55,8 +55,15 @@ ul.sub-menu {
 }
 
 .site-logo img {
-    /* Sizing fix for site logo */
-    max-height: 9em;
+    /* Sizing fix for site logo - default mobile size */
+    max-height: 6em;
+}
+
+@media screen and (min-width: 30em) {
+    .site-logo img {
+        /* Sizing fix for site logo - enhanced desktop size */
+        max-height: 9em;
+    }
 }
 
 /* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
