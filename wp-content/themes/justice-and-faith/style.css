@@ -48,6 +48,15 @@ ul.sub-menu {
     /* Tighten up header */
     padding-top: 0;
     padding-bottom: 0;
+
+    /* Replace margin with padding to get color right around the header image */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.site-logo img {
+    /* Sizing fix for site logo */
+    max-height: 9em;
 }
 
 /* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
@@ -69,25 +78,12 @@ body {
     background-color: rgb(var(--jfc-dark-gray));
 }
 
-.site-logo img {
-    /* Sizing fix for site logo */
-    max-height: 9em;
-}
-
 #site-header {
-    /* Match (extend) the background color of the logo image */
-    background-color: rgb(var(--jfc-dark-gray)) !important;
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
 
 .header-inner {
-    /* 
-        Primary header block
-        - replace margin with padding to get color right around the header image
-     */
     background-color: rgb(var(--jfc-primary-yellow)) !important;
-    padding-right: 40px;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary-menu>li>.icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
