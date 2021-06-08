@@ -13,58 +13,62 @@
 /* Configure fonts */
 
 @import url("../storefront/style.css");
-
-h1, h2, .site-title, .primary-menu {
+h1, h2, .site-title, .primary-navigation {
     font-family: "Bebas Neue", Helvetica, sans-serif;
     /* override Storefront specialization */
     font-weight: 400;
     letter-spacing: normal;
 }
 
-.site-title {
-    font-size: 6rem;
+.primary-navigation {
+    font-size: 1.5rem;
 }
 
-.site-description {
-    font-size: 1.6rem;
-}
-
-ul.primary-menu {
-    font-size: 3rem;
-}
-
-ul.sub-menu {
-    font-size: 2rem;
-    letter-spacing: normal;
-}
-
-/* Layout */
+/* 
+** Layout 
+*/
 
 .page .entry-title, header.entry-header {
     /* Hide titles on all pages */
     display: none;
 }
 
-.header-inner {
-    /* Tighten up header */
-    padding-top: 0;
-    padding-bottom: 0;
-
-    /* Replace margin with padding to get color right around the header image */
-    margin-left: 0;
-    margin-right: 0;
+.site-header .site-search {
+    /* Suppress product search */
+    display: none;
 }
 
-.site-logo img {
-    /* Sizing fix for site logo - default mobile size */
-    max-height: 6em;
+/* The parent theme breaks the site logo and site nav into two lines -> bring them into a single line
+   and allocate 25% to the image, 75% to the primary navigation div */
+
+.site-header .col-full, .storefront-primary-navigation {
+    display: inline-block;
 }
 
-@media screen and (min-width: 30em) {
-    .site-logo img {
-        /* Sizing fix for site logo - enhanced desktop size */
-        max-height: 9em;
-    }
+.site-header .col-full {
+    /* The div containing the site logo */
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25%;
+}
+
+.site-header .col-full .custom-logo {
+    /* The img containing the site logo */
+    max-width: 100%;
+}
+
+.storefront-primary-navigation {
+    /* Allow the primary navigation div (menu, shopping cart, ...) to take up all the remaining space */
+    max-width: 100%;
+    width: 75%;
+}
+
+.storefront-primary-navigation .col-full {
+    /* There's just one div in here so let it take up all the space */
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
