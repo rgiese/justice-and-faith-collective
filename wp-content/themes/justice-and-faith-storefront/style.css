@@ -1,0 +1,152 @@
+/*
+ Theme Name:   Justice and Faith Collective Storefront
+ Theme URI:    https://github.com/rgiese/justice-and-faith-collective.git
+ Description:  A child theme of the Storefront WordPress theme for justiceandfaith.com
+ Author:       Robin Giese
+ Author URI:   https://grumpycorp.com
+ Template:     storefront
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Configure fonts */
+
+@import url("../storefront/style.css");
+
+h1, h2, .site-title, .primary-menu {
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    /* override Storefront specialization */
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.site-title {
+    font-size: 6rem;
+}
+
+.site-description {
+    font-size: 1.6rem;
+}
+
+ul.primary-menu {
+    font-size: 3rem;
+}
+
+ul.sub-menu {
+    font-size: 2rem;
+    letter-spacing: normal;
+}
+
+/* Layout */
+
+.page .entry-title, header.entry-header {
+    /* Hide titles on all pages */
+    display: none;
+}
+
+.header-inner {
+    /* Tighten up header */
+    padding-top: 0;
+    padding-bottom: 0;
+
+    /* Replace margin with padding to get color right around the header image */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.site-logo img {
+    /* Sizing fix for site logo - default mobile size */
+    max-height: 6em;
+}
+
+@media screen and (min-width: 30em) {
+    .site-logo img {
+        /* Sizing fix for site logo - enhanced desktop size */
+        max-height: 9em;
+    }
+}
+
+/* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
+
+:root {
+    /* Listing colors as "naked" RGB values here so we can tone them with `rgba` below */
+    --jfc-primary-yellow: 250, 218, 80;
+    --jfc-primary-blue: 20, 163, 199;
+    --jfc-dark-gray: 102, 102, 102;
+}
+
+body {
+    /* Toned-down primary background */
+    background-color: rgba(var(--jfc-primary-yellow), 0.2);
+}
+
+.site-logo {
+    /* Site logo has transparent background -> provide appropriate background color */
+    background-color: rgb(var(--jfc-dark-gray));
+}
+
+#site-header {
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
+}
+
+.header-inner {
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
+}
+
+@media screen and (max-width: 30em) {
+    /* Mobile only */
+    .menu-modal-inner {
+        background-color: rgba(var(--jfc-primary-yellow), 0.5) !important;
+    }
+}
+
+body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary-menu>li>.icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
+    /* Link color in header blocks */
+    color: black !important;
+}
+
+#site-footer, .footer-nav-widgets-wrapper {
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
+}
+
+/* Home page-specific tweaks */
+
+.jfc-home-blurb {
+    background-color: rgb(var(--jfc-dark-gray)) !important;
+    color: rgb(var(--jfc-primary-yellow)) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    /* Replace margin with padding so we get the background color we want. */
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+
+.wp-block-image {
+    /* This is (probably?) only used on the home page; suppress margin. */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.footer-nav-widgets-wrapper {
+    margin-top: 0 !important;
+}
+
+/* Non-home-page specific tweaks */
+
+.entry-content {
+    /* Add padding to content by default since we've tightened up the header and footer... */
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.home .entry-content {
+    /* ...except not on the actual home page. */
+    padding-top: 0;
+    padding-bottom: 0;
+}

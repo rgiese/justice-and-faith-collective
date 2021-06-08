@@ -7,3 +7,4 @@ wp-content/*
 wp-content/themes/*
 
 !wp-content/themes/justice-and-faith
+!wp-content/themes/justice-and-faith-storefront
