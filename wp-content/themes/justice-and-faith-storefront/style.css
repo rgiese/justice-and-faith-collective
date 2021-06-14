@@ -33,42 +33,42 @@ h1, h2, .site-title, .primary-navigation {
     display: none;
 }
 
-.site-header .site-search {
-    /* Suppress product search */
-    display: none;
+.site-header {
+    padding-top: 0;
+    border-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
-/* The parent theme breaks the site logo and site nav into two lines -> bring them into a single line
-   and allocate 25% to the image, 75% to the primary navigation div */
+/* 
+  Given our simplifications of the header structure in functions.php, the top-level .site-header elements are:
+  - .site-branding
+  - .main-navigation
+  - .site-header-cart
 
-.site-header .col-full, .storefront-primary-navigation {
-    display: inline-block;
+  We'll convert the main .site-header to a flexbox and allocate the children appropriately.
+  
+  Also:
+  - clear all margins 
+*/
+
+.site-header {
+    display: flex;
+    /* flex children */
 }
 
-.site-header .col-full {
-    /* The div containing the site logo */
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 25%;
+.site-header .site-branding {
+    flex: 1;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
 }
 
-.site-header .col-full .custom-logo {
-    /* The img containing the site logo */
-    max-width: 100%;
+.site-header .main-navigation {
+    flex: 2;
+    margin-right: 0 !important;
 }
 
-.storefront-primary-navigation {
-    /* Allow the primary navigation div (menu, shopping cart, ...) to take up all the remaining space */
-    max-width: 100%;
-    width: 75%;
-}
-
-.storefront-primary-navigation .col-full {
-    /* There's just one div in here so let it take up all the space */
-    max-width: 100%;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+.site-header .site-header-cart {
+    flex: 1;
 }
 
 /* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
