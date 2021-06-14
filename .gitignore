@@ -8,3 +8,11 @@ wp-content/themes/*
 
 !wp-content/themes/justice-and-faith
 !wp-content/themes/justice-and-faith-storefront
+
+!wp-content/themes/storefront
+
+# Ignore stock plugins (but include submodules provided for reference)
+!wp-content/plugins
+wp-content/plugins/index.php
+
+!wp-content/plugins/woocommerce

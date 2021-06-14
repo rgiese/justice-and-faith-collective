@@ -1,0 +1,6 @@
+[submodule "wp-content/plugins/woocommerce"]
+	path = wp-content/plugins/woocommerce
+	url = https://github.com/woocommerce/woocommerce.git
+[submodule "wp-content/themes/storefront"]
+	path = wp-content/themes/storefront
+	url = https://github.com/woocommerce/storefront.git
