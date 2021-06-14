@@ -131,12 +131,18 @@ h1, h2, .site-title, .primary-navigation, .widget-title {
 
 .footer-widgets {
     padding-top: 2em;
+    border-bottom: none;
 }
 
 .widget-title {
     border-bottom-width: 0 !important;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
+}
+
+.site-footer .site-info {
+    /* Enough padding already here from previous elements */
+    padding-top: 0;
 }
 
 /*
