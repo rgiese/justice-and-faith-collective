@@ -30,4 +30,7 @@
 		remove_action('storefront_header', 'storefront_primary_navigation_wrapper', 42);
 		remove_action('storefront_header', 'storefront_primary_navigation_wrapper_close', 68);
 	}
+
+	// Remove Storefront/WooCommerce advertising - we're already paying for you good folks.
+	add_filter('storefront_credit_link', '__return_false');
 ?>
