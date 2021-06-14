@@ -97,7 +97,41 @@ h1, h2, .site-title, .primary-navigation, .widget-title {
     margin-bottom: 0;
 }
 
+/* Main content fixes */
+
+.storefront-breadcrumb {
+    margin-bottom: 0;
+}
+
+.content-area .page {
+    /* Some padding along the bottom... */
+    margin-bottom: 1em;
+}
+
+.home .content-area .page {
+    /* ...as long as we're not on our single-image home page */
+    margin-bottom: 0;
+}
+
+.entry-content figure {
+    /* Odd-ball bottom margin for main page hero image -> remove */
+    margin-bottom: 0 !important;
+}
+
+.entry-content h2 {
+    /* The first <h2/> of a page has an awkward top margin -> remove */
+    margin-top: 0;
+}
+
 /* Footer fixes */
+
+.site-footer {
+    padding: 0;
+}
+
+.footer-widgets {
+    padding-top: 2em;
+}
 
 .widget-title {
     border-bottom-width: 0 !important;
@@ -156,28 +190,4 @@ body {
     /* Color */
     background-color: rgb(var(--jfc-dark-gray)) !important;
     color: rgb(var(--jfc-primary-yellow)) !important;
-}
-
-.wp-block-image {
-    /* This is (probably?) only used on the home page; suppress margin. */
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.footer-nav-widgets-wrapper {
-    margin-top: 0 !important;
-}
-
-/* Non-home-page specific tweaks */
-
-.entry-content {
-    /* Add padding to content by default since we've tightened up the header and footer... */
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
-
-.home .entry-content {
-    /* ...except not on the actual home page. */
-    padding-top: 0;
-    padding-bottom: 0;
 }
