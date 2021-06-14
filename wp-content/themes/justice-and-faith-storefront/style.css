@@ -102,33 +102,14 @@ body {
     background-color: rgba(var(--jfc-primary-yellow), 0.2);
 }
 
-.site-logo {
+.site-header .site-branding, .site-header .main-navigation, .site-header .site-header-cart {
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
+}
+
+.site-header .site-branding img {
     /* Site logo has transparent background -> provide appropriate background color */
     background-color: rgb(var(--jfc-dark-gray));
-}
-
-#site-header {
-    background-color: rgb(var(--jfc-primary-yellow)) !important;
-}
-
-.header-inner {
-    background-color: rgb(var(--jfc-primary-yellow)) !important;
-}
-
-@media screen and (max-width: 30em) {
-    /* Mobile only */
-    .menu-modal-inner {
-        background-color: rgba(var(--jfc-primary-yellow), 0.5) !important;
-    }
-}
-
-body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary-menu>li>.icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
-    /* Link color in header blocks */
-    color: black !important;
-}
-
-#site-footer, .footer-nav-widgets-wrapper {
-    background-color: rgb(var(--jfc-primary-yellow)) !important;
+    border-radius: 0;
 }
 
 /* Home page-specific tweaks */
