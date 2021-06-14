@@ -150,33 +150,28 @@ h1, h2, .site-title, .primary-navigation, .widget-title {
 */
 
 :root {
-    /* Listing colors as "naked" RGB values here so we can tone them with `rgba` below */
-    --jfc-primary-yellow: 250, 218, 80;
-    --jfc-primary-blue: 20, 163, 199;
-    --jfc-dark-gray: 102, 102, 102;
+    /* Primary colors */
+    --jfc-primary-yellow: hsl(49, 94%, 65%);
+    --jfc-primary-blue: hsl(192, 82%, 43%);
+    --jfc-primary-gray: hsl(0, 0%, 40%);
+
+    /* Derivative colors */
+    --jfc-lightened-yellow: hsl(49, 94%, 90%);
 }
 
-body {
+body, .site-header .site-branding, .site-header .main-navigation, .site-header .site-header-cart, .site-footer {
+    background-color: var(--jfc-primary-yellow) !important;
+}
+
+#page {
     /* Toned-down primary background */
-    background-color: rgba(var(--jfc-primary-yellow), 0.2);
-}
-
-/* Header */
-
-.site-header .site-branding, .site-header .main-navigation, .site-header .site-header-cart {
-    background-color: rgb(var(--jfc-primary-yellow)) !important;
+    background-color: var(--jfc-lightened-yellow);
 }
 
 .site-header .site-branding img {
     /* Site logo has transparent background -> provide appropriate background color */
-    background-color: rgb(var(--jfc-dark-gray));
+    background-color: var(--jfc-primary-gray);
     border-radius: 0;
-}
-
-/* Footer */
-
-.site-footer {
-    background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
 
 /* Home page-specific tweaks */
@@ -194,6 +189,6 @@ body {
     font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1rem;
     /* Color */
-    background-color: rgb(var(--jfc-dark-gray)) !important;
-    color: rgb(var(--jfc-primary-yellow)) !important;
+    background-color: var(--jfc-primary-gray) !important;
+    color: var(--jfc-primary-yellow) !important;
 }
