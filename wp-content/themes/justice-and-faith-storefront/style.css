@@ -134,18 +134,20 @@ body:not(.overlay-header) .primary-menu>li>a, body:not(.overlay-header) .primary
 /* Home page-specific tweaks */
 
 .jfc-home-blurb {
-    background-color: rgb(var(--jfc-dark-gray)) !important;
-    color: rgb(var(--jfc-primary-yellow)) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    /* Replace margin with padding so we get the background color we want. */
-    margin: 0;
+    /* Layout: full screen width despite limited-width parent */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    /* Layout: some padding */
     padding-left: 2em;
     padding-right: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
+    /* Text */
     font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.8rem;
+    font-size: 1rem;
+    /* Color */
+    background-color: rgb(var(--jfc-dark-gray)) !important;
+    color: rgb(var(--jfc-primary-yellow)) !important;
 }
 
 .wp-block-image {
