@@ -13,7 +13,7 @@
 /* Configure fonts */
 
 @import url("../storefront/style.css");
-h1, h2, .site-title, .primary-navigation {
+h1, h2, .site-title, .primary-navigation, .widget-title {
     font-family: "Bebas Neue", Helvetica, sans-serif;
     /* override Storefront specialization */
     font-weight: 400;
@@ -22,6 +22,10 @@ h1, h2, .site-title, .primary-navigation {
 
 .primary-navigation {
     font-size: 1.5rem;
+}
+
+.widget-title {
+    font-size: 2rem !important;
 }
 
 /* 
@@ -88,7 +92,22 @@ h1, h2, .site-title, .primary-navigation {
     padding-right: 1em;
 }
 
-/* Color (use !important to override <style id=’twentytwenty-style-inline-css’>) */
+.content-area, .site-main {
+    /* Remove margin from bottom of core content area */
+    margin-bottom: 0;
+}
+
+/* Footer fixes */
+
+.widget-title {
+    border-bottom-width: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+** Color 
+*/
 
 :root {
     /* Listing colors as "naked" RGB values here so we can tone them with `rgba` below */
@@ -102,6 +121,8 @@ body {
     background-color: rgba(var(--jfc-primary-yellow), 0.2);
 }
 
+/* Header */
+
 .site-header .site-branding, .site-header .main-navigation, .site-header .site-header-cart {
     background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
@@ -110,6 +131,12 @@ body {
     /* Site logo has transparent background -> provide appropriate background color */
     background-color: rgb(var(--jfc-dark-gray));
     border-radius: 0;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: rgb(var(--jfc-primary-yellow)) !important;
 }
 
 /* Home page-specific tweaks */
